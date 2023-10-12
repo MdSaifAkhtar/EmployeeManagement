@@ -35,21 +35,16 @@ public class EmployeeController {
 	{
 		return repo.findById(eid).orElse(new Employee());
 	}
-//	
-//	@RequestMapping(path = {"/updateEmp", "/addEmp"})
-//	public String updateOrAddEmp(Employee e)
-//	{
-//		repo.save(e);
-//		return "index.jsp";
-//	}
 	
-//	@RequestMapping("/removeEmp")
-//	@ResponseBody
-//	public String removeEmp(int eid)
-//	{
-//		repo.deleteById(eid);
-//		return "Removed employee with id "+eid+" successfully";
-//	}
+
+	
+	@RequestMapping(path = { "/addEmp"})
+	public String updateOrAddEmp(Employee e)
+	{
+		repo.save(e);
+		return "index.jsp";
+	}
+
 	
 	@RequestMapping("/searchEmpByName")
 	@ResponseBody
