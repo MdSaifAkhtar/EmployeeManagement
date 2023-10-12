@@ -38,12 +38,14 @@ public class EmployeeController {
 	
 
 	
-	@RequestMapping(path = { "/addEmp"})
-	public String updateOrAddEmp(Employee e)
+	@RequestMapping(path ="/addEmp")
+	public String AddEmp(Employee e)
 	{
 		repo.save(e);
 		return "index.jsp";
 	}
+	
+	
 
 	
 	@RequestMapping("/searchEmpByName")
